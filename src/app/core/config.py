@@ -13,6 +13,7 @@ class Settings(BaseSettings):
     environment: str
 
     api_prefix: str
+    debug: bool
 
     pg_db_user: str
     pg_db_password: str

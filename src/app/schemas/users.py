@@ -5,6 +5,9 @@ class UserBase(BaseModel):
     is_active: bool = True
     is_superuser: bool = False
 
+class UserRead(UserBase):
+    id: int
+
 class UserCreate(UserBase):
     password: str
 

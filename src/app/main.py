@@ -5,7 +5,7 @@ from app.routers import users
 from app.api.v1.endpoints import users, mongo_users
 from app.core.database import init_db
 from app.core.config import get_settings
-from app.events import on_startup, on_shutdown
+from app.services.events import on_startup, on_shutdown
 
 def setup_routers(app: FastAPI) -> None:
     app.include_router(users.router, prefix=get_settings().api_prefix)
