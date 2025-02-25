@@ -21,7 +21,9 @@ pytz = "*"
 celery = "*"
 boto3 = "*"
 pydantic = {extras = ["email"], version = "*"}
-passlib = "*"
+python-jose = {extras = ["cryptography"], version = "*"}
+passlib = {extras = ["bcrypt"], version = "*"}
+python-multipart = "*"
 
 [dev-packages]
 autoflake = "*"
