@@ -40,7 +40,11 @@ def setup_handlers(app: FastAPI) -> None:
 def create_app() -> FastAPI:
     setup_logger()
 
-    app = FastAPI(lifespan=setup_lifespan)
+    app = FastAPI(lifespan=setup_lifespan
+        # docs_url="/docs",  
+        # redoc_url="/redoc",  
+        # openapi_url="/openapi/openapi.json" 
+    )
 
     setup_handlers(app)
     setup_routers(app)
